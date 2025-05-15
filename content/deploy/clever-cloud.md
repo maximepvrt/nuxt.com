@@ -22,7 +22,7 @@ To deploy your Nuxt project to Clever Cloud, you will need to create a **new app
 7. Inject **environment variables**:
   - For **Node.js**
 
-::package-managers
+::code-group{sync="pm"}
 
 ```ini [npm]
 CC_PRE_BUILD_HOOK="npm run build"
@@ -45,7 +45,7 @@ CC_RUN_COMMAND="node .output/server/index.mjs"
 ```ini [bun]
 CC_CUSTOM_BUILD_TOOL="bun build"
 CC_NODE_BUILD_TOOL="custom"
-CC_PRE_BUILD_HOOK="npm i -g bun && bun install && bun run build "
+CC_PRE_BUILD_HOOK="npm i -g bun && bun install && bun run build"
 CC_RUN_COMMAND="node .output/server/index.mjs"
 ```
 
@@ -53,7 +53,7 @@ CC_RUN_COMMAND="node .output/server/index.mjs"
 
   - For a **static application**
 
-::package-managers
+::code-group{sync="pm"}
 
 ```ini [npm]
 CC_NODE_VERSION=20
